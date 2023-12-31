@@ -1,7 +1,8 @@
 from pydantic import BaseModel
 
 class Prompt(BaseModel):
-    text: str
+    title: str
+    description: str 
 
 class Player(BaseModel):
     id: int

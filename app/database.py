@@ -6,13 +6,14 @@ database = databases.Database(DATABASE_URL)
 
 metadata = sqlalchemy.MetaData()
 
-# Define tables here with SQLAlchemy
 prompts = sqlalchemy.Table(
     "prompts",
     metadata,
     sqlalchemy.Column("id", sqlalchemy.Integer, primary_key=True),
-    sqlalchemy.Column("text", sqlalchemy.String),
+    sqlalchemy.Column("title", sqlalchemy.String),
+    sqlalchemy.Column("description", sqlalchemy.String),
 )
+
 
 # Add other tables (players, scores) similarly...
 
